@@ -1,0 +1,132 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>凑单品</title>
+    <meta name="viewport"
+          content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <link rel="stylesheet" href="css/base.css"/>
+    <link rel="stylesheet" href="css/gsproduct.css"/>
+</head>
+<body>
+<header id="header" class="header">
+    <div id="ctl00_headerApp" class="head">
+        <div class="back">
+            <a href="index.html" class="icon-back"></a>
+        </div>
+        <h1>凑单品</h1>
+
+        <div class="home">
+            <a href="javascript:;" class="icon-app"></a>
+        </div>
+    </div>
+</header>
+
+<main class="gs-product">
+    <div class="list">
+        <div class="hd">
+            <div class="filter">
+
+
+            </div>
+            <div class="search"><i class="icon-search"></i></div>
+            <!--各种下拉-->
+            <div class="popsort popbox" id="shop">
+
+
+            </div>
+            <div class="popcat popbox" id="area">
+
+
+            </div>
+            <div class="popprice popbox" id="price">
+                <ul>
+                    <li class="on"><a href="javascript:GetRequest('areaMoney', 0);">全部价格</a></li>
+                </ul>
+            </div>
+        </div>
+        <div class="bd gs-product-list">
+
+        </div>
+    </div>
+
+</main>
+<footer id="ctl00_foot">
+    <div class="foot_top">
+        <a href="javascript:;">登录</a>
+        <a href="javascript:;">注册</a>
+        <a href="#" style="width: 40%; border: 0;">
+            <img src="http://www.zuyushop.com/wap/images/top.jpg" width="15" height="15">返回顶部
+        </a>
+    </div>
+    <div class="footer">
+        <p>
+            <a href="javascript:;" style="color: Red;">手机APP下载</a>
+            <a href="index.html">慢慢买手机版</a> -- 掌上比价平台
+        </p>
+
+        <p>m.manmanbuy.com</p>
+    </div>
+</footer>
+
+
+<script type="text/template" id="filtertmp">
+    <ul>
+                    {{each result as v i}}
+                       <li class="on">
+                           <a href="javascript:selectshow('{{v.selectName}}')" data-id="0" class="{{v.selectName}}">
+                                {{v.selected}}
+                                <i></i>
+                           </a>
+                       </li>
+                    {{/each}}
+    </ul>
+</script>
+
+<script type="text/template" id="gsshoptmp">
+    <ul>
+                    {{each result as v i}}
+                          <li>
+                              <a href="javascript:getshopproduct('shopid', '{{v.shopId}}','{{v.shopName}}');" data-shopid="{{v.shopId}}">{{v.shopName}}</a>
+                          </li>
+                    {{/each}}
+    </ul>
+</script>
+
+<script type="text/template" id="gsareatmp">
+    <ul>
+                    {{each result as v i}}
+                          <li>
+                              <a href="javascript:getareaproduct('areaid', '{{v.areaId}}','{{v.areaName.split('(')[0]}}')" data-areaid={{v.areaId}}>{{v.areaName}}</a>
+                          </li>
+                    {{/each}}
+    </ul>
+</script>
+
+<script type="text/template" id="gsproducttmp">
+    <ul id="container" class="masonry" style="position: relative; height: 0px;">
+                    {{each result as v i}}
+                            <li>
+                                <a href="http://item.m.jd.com/ware/view.action?wareId=1274360" class="item border-img">
+                                    <div class="pic"><img src="{{v.productImg}}" style="width: 174px; height: 174px;"></div>
+                                    <div class="title">{{v.productName}}</div>
+                                    <div class="other">
+                                        <div class="price">{{v.productPrice}}</div>
+                                        <div class="btn">去凑单</div>
+                                        <div class="clearfix"></div>
+                                    </div>
+                                </a>
+                            </li>
+                    {{/each}}
+    </ul>
+    <div class="clearfix"></div>
+</script>
+
+
+<script src="lib/template.js"></script>
+<script src="lib/jquery.min.js"></script>
+<script src="js/Tools.js"></script>
+<script src="js/Route.js"></script>
+<script src="js/gsproduct.js"></script>
+</body>
+</html>

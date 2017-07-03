@@ -1,0 +1,64 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>商城导航</title>
+    <meta name="viewport"
+          content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <link rel="stylesheet" href="css/base.css"/>
+    <link rel="stylesheet" href="css/sitenav.css"/>
+</head>
+<body>
+<header id="header" class="header">
+    <div id="ctl00_headerApp" class="head">
+        <div class="back">
+            <a href="index.html" class="icon-back"></a>
+        </div>
+        <h1>
+            商城导航
+        </h1>
+        <div class="home">
+            <a href="javascript:;" class="icon-app"></a>
+        </div>
+    </div>
+</header>
+<main class="site-nav">
+
+
+</main>
+<footer id="ctl00_foot">
+    <div class="foot_top">
+        <a href="javascript:;">登录</a>
+        <a href="javascript:;">注册</a>
+        <a href="#" style="width: 40%; border: 0;">
+            <img src="http://www.zuyushop.com/wap/images/top.jpg" width="15" height="15">返回顶部
+        </a>
+    </div>
+    <div class="footer">
+        <p>
+            <a href="javascript:;" style="color: Red;">手机APP下载</a>
+            <a href="index.html">慢慢买手机版</a> -- 掌上比价平台
+        </p>
+        <p>m.manmanbuy.com</p>
+    </div>
+</footer>
+
+<script type="text/template" id="sitenavtmp">
+    <div class="link clearfix">
+            {{each result as v i}}
+                <a href="{{v.navHref}}" target="_blank">
+                    <img src="{{v.navImg}}" alt=""/>
+                    {{v.navTitle}}
+                </a>
+            {{/each}}
+    </div>
+</script>
+
+
+<script src="lib/template.js"></script>
+<script src="lib/jquery.min.js"></script>
+<script src="js/Tools.js"></script>
+<script src="js/Route.js"></script>
+<script src="js/sitenav.js"></script>
+</body>
+</html>

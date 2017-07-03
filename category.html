@@ -1,0 +1,131 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>分类页面</title>
+    <meta name="viewport" content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <link rel="stylesheet" href="css/base.css">
+    <link rel="stylesheet" href="css/category.css">
+    <!--<link rel="stylesheet" href="css/moneyctrl.css">-->
+
+</head>
+<body>
+<!--头部-->
+<header id="header" class="header">
+    <div class="logo">
+        <a href="index.html" title="慢慢买">
+            <img src="images/header_logo.png" alt="">
+        </a>
+    </div>
+    <div class="appdown">
+        <a href="javascript:;" title="手机app下载">
+            <img src="images/header_app.png" alt="手机app下载">
+        </a>
+    </div>
+</header>
+<section id="form-search">
+    <form action="#" class="search">
+        <input type="search" name="" id="" placeholder="请输入你想比价的商品">
+        <input type="button" value="搜索">
+    </form>
+</section>
+<section id="menu">
+    <div class="row clearfix">
+    </div>
+</section>
+
+
+<section id="category">
+    <div class="row clearfix">
+        <!--<ul class="category-title">-->
+            <!--<li>-->
+            <!--<a href="#" style="background-image:url('http://www.zuyushop.com/wap/images/arrow1.gif');">大家电</a>-->
+            <!--<ul class="category-content clearfix">-->
+            <!--<li><a href="#">平板电视</a></li>-->
+            <!--<li><a href="#">平板电视</a></li>-->
+            <!--<li><a href="#">平板电视</a></li>-->
+            <!--<li><a href="#">平板电视</a></li>-->
+            <!--<li><a href="#">平板电视</a></li>-->
+            <!--<li><a href="#">平板电视</a></li>-->
+            <!--<li><a href="#">平板电视</a></li>-->
+            <!--</ul>-->
+            <!--</li>-->
+            <!--<li>-->
+            <!--<a href="#" style="background-image:url('http://www.zuyushop.com/wap/images/arrow1.gif');">大家电</a>-->
+            <!--</li>-->
+            <!--<li>-->
+            <!--<a href="#" style="background-image:url('http://www.zuyushop.com/wap/images/arrow1.gif');">大家电</a>-->
+            <!--</li>-->
+            <!--<li>-->
+            <!--<a href="#" style="background-image:url('http://www.zuyushop.com/wap/images/arrow1.gif');">大家电</a>-->
+            <!--</li>-->
+            <!--<li>-->
+            <!--<a href="#" style="background-image:url('http://www.zuyushop.com/wap/images/arrow1.gif');">大家电</a>-->
+            <!--</li>-->
+        <!--</ul>-->
+
+    </div>
+
+    </section>
+
+
+
+
+      <script type="text/template" id="categorytitletmp">
+
+               {{each result as v i}}
+                 <li>
+                     <a href="javascript:void(0)" data-title-id="{{v.titleId}}" style="background-image:url(http://www.zuyushop.com/wap/images/arrow1.gif);">{{v.title}}
+                     </a>
+                     <ul class="category-content clearfix"></ul>
+
+                 </li>
+               {{/each}}
+
+      </script>
+      <script type="text/template" id="categorytmp">
+             {{each result as v i}}
+
+                        <li class="list">
+                            <a href="productlist.html?categoryid={{v.categoryId}}&category={{v.category}}&pageid=1" data-category-id="{{v.categoryId}}">{{v.category}}</a>
+                        </li>
+
+             {{/each}}
+      </script>
+
+
+
+
+
+
+<!--底部-->
+<footer id="ctl00_foot">
+    <div class="foot_top">
+        <a href="javascript:;">登录</a>
+        <a href="javascript:;">注册</a>
+        <a href="#" style="width: 40%; border: 0;">
+            <img src="http://www.zuyushop.com/wap/images/top.jpg" width="15" height="15">返回顶部
+        </a>
+    </div>
+    <div class="footer">
+        <p>
+            <a href="javascript:;" style="color: Red;">手机APP下载</a>
+            <a href="index.html">慢慢买手机版</a> -- 掌上比价平台
+        </p>
+        <p>m.manmanbuy.com</p>
+    </div>
+</footer>
+
+
+
+
+
+
+    <script src="lib/template.js"></script>
+    <script src="lib/jquery.min.js"></script>
+    <script src="js/Tools.js"></script>
+    <script src="js/Route.js"></script>
+    <script src="js/category.js"></script>
+
+</body>
+</html>
